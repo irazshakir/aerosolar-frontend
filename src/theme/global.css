@@ -1,0 +1,91 @@
+/* CSS mirror of theme/tokens.ts — feature code uses these variables, never raw hex. */
+:root {
+  color-scheme: light;
+  --sial-brand: #6c4df6;
+  --sial-brand-soft: #f1eeff;
+  --sial-canvas: #f7f8fa;
+  --sial-surface: #ffffff;
+  --sial-border: #eaecf0;
+  --sial-text: #101828;
+  --sial-text-muted: #667085;
+  --sial-radius: 10px;
+  --sial-radius-lg: 14px;
+  --sial-font-size: 13px;
+  --sial-sidebar-width: 248px;
+  --sial-sidebar-collapsed-width: 72px;
+  --sial-header-height: 56px;
+  --sial-content-max-width: 1440px;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --sial-brand-soft: rgba(108, 77, 246, 0.22);
+  --sial-canvas: #141414;
+  --sial-surface: #1d1d1f;
+  --sial-border: #2e2e33;
+  --sial-text: #f2f4f7;
+  --sial-text-muted: #98a2b3;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter Variable', Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-size: var(--sial-font-size);
+  line-height: 1.5;
+  color: var(--sial-text);
+  background: var(--sial-canvas);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: var(--sial-brand-soft);
+  color: var(--sial-brand);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--sial-border) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--sial-border);
+  border-radius: 999px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+:focus-visible {
+  outline: 2px solid var(--sial-brand);
+  outline-offset: 2px;
+}

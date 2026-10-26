@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#6C4DF6" />
+    <meta
+      name="description"
+      content="AeroSolar — build, configure, and monitor AI chatbots from one workspace."
+    />
+    <title>AeroSolar</title>
+    <script>
+      // Apply the stored appearance before React mounts so dark mode never flashes light.
+      try {
+        const stored = JSON.parse(localStorage.getItem('sial-ui') || '{}')
+        if (stored.state?.themeMode === 'dark') {
+          document.documentElement.dataset.theme = 'dark'
+        }
+      } catch {
+        // Unreadable storage falls back to the light theme.
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
